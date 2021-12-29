@@ -4,6 +4,12 @@ const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
 
+function likeButton() {
+EMPTY_HEART.addEventListener('click', mimicServerCall)
+.then(response => response.json)
+.catch(console.log(error))
+}
+
 
 
 
