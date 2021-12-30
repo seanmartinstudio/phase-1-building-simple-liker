@@ -17,7 +17,7 @@ for (i = 0; i <= likeGlyph.length -1; i++) {
 //Function for like button glyph being clicked
 function clickLikeButtonGlyph(event) {
 //Conditional statement if like button is empty
-if(event.target.innerText = EMPTY_HEART)
+if(event.target.innerText = EMPTY_HEART) {
   mimicServerCall()
     .then((response) => {
       console.log(response)
@@ -29,6 +29,7 @@ if(event.target.innerText = EMPTY_HEART)
       const hidden = document.querySelector('div')
       hidden.removeAttribute('.hidden')
 })
+}
 }
 
 
