@@ -13,10 +13,9 @@ for (i = 0; i <= likeGlyph.length -1; i++) {
   likeGlyph[i].addEventListener('click', clickLikeButtonGlyph)
 }
 
-
 //Function for like button glyph being clicked
 function clickLikeButtonGlyph(event) {
-//Conditional statement if like button is empty
+//Conditional statement, if heart is empty when button is pressed
 if(event.target.innerText === EMPTY_HEART) {
   mimicServerCall()
     .then((response) => {
@@ -31,6 +30,7 @@ if(event.target.innerText === EMPTY_HEART) {
       setTimeout(() => {hidden.classList.add('hidden')}, 3000)
 })
 }
+//Conditional statement, if heart if full when button is pressed
 if(event.target.innerText === FULL_HEART) {
   event.target.innerText = EMPTY_HEART
   event.target.classList.remove('activated-heart')
