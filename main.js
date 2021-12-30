@@ -14,8 +14,7 @@ for (i = 0; likeGlyph.length; i++) {
 //Function for like button glyph being clicked
 function clickLikeButtonGlyph() {
 mimicServerCall()
-.then(response => console.log(response))
-
+.then(response => response.json)
 }
 
 
