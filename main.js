@@ -20,12 +20,14 @@ function clickLikeButtonGlyph(event) {
 if(event.target.innerText = EMPTY_HEART)
   mimicServerCall()
     .then((response) => {
+      console.log(response)
       event.target.innerText = FULL_HEART
       event.target.classList.add('activated-heart')
     })
     .catch((response) => {
+      console.log(response)
       const hidden = document.querySelector('div')
-      hidden.removeAttribute('hidden')
+      hidden.removeAttribute('.hidden')
 })
 }
 
