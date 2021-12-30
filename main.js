@@ -3,20 +3,24 @@ const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
 
-//Declare variable 'likeGlyph' for each like button glyph in App
+// //Declare variable 'likeGlyph' for each like button glyph in App
 const likeGlyph = document.querySelectorAll(".like-glyph")
 
-//For loop iterating over each like button glyph
+// //For loop iterating over each like button glyph
 for (i = 0; likeGlyph.length; i++) {
   likeGlyph[i].addEventListener('click', clickLikeButtonGlyph);
 }
 
+// likeGlyph.forEach()
+
 //Function for like button glyph being clicked
 function clickLikeButtonGlyph() {
 mimicServerCall()
-.then(response => response.json())
-.then(data => console.log(data))
+//Adding heart in .then
+.then(likeGlyph.classList.add('.activated-heart'))
+// .catch()
 }
+
 
 
 
