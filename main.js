@@ -19,13 +19,17 @@ function clickLikeButtonGlyph(event) {
 //Conditional statement if like button is empty
 if(event.target.innerText = EMPTY_HEART)
   mimicServerCall()
-    //Adding heart in .then
-    .then((respone) => {
+    .then((response) => {
       event.target.innerText = FULL_HEART
       event.target.classList.add('activated-heart')
     })
-    .catch((response) => {const hidden = document.querySelector('div').removeAttribute('hidden')})
-}   
+    .catch((response) => {
+      const hidden = document.querySelector('div')
+      hidden.removeAttribute('hidden')
+})
+}
+
+
 
 
 
@@ -48,3 +52,4 @@ function mimicServerCall(url = "http://mimicServer.example.com", config = {}) {
     }, 300);
   });
 }
+
